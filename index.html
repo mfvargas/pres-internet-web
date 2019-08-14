@@ -1,0 +1,186 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Programación de aplicaciones geoespaciales en Python</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+    	<style type="text/css">
+        	.column {
+            	float: left;
+            	width: 50%;
+        	}
+        	/* Clear floats after the columns */
+        	.row:after {
+            	content: "";
+            	display: table;
+            	clear: both;
+        	}
+    	</style> 
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h2>Programación de aplicaciones geoespaciales en Python</h2>
+					<br>
+  					<small>Manuel Vargas (<a href="mailto:mfvargas@gmail.com">mfvargas@gmail.com</a>)</small>
+					<br>
+					<small>Marzo de 2019</small>
+				</section>
+				<section id="python">
+					<h3>El lenguaje Python</h3>
+					<div style="text-align:left">
+						<li>Lenguaje de programación de propósito general.</li>
+						<li>Muy popular en <a href="https://en.wikipedia.org/wiki/Data_science">ciencia de datos</a> y <a href="https://en.wikipedia.org/wiki/Machine_learning">aprendizaje de máquinas</a>, además de desarrollo web, <em>scripting</em> y pruebas de sistemas, entre otras áreas de aplicación.</li>
+					</div>
+					<br>
+					<figure>
+						<img src="img/python-logo-master-v3-TM-flattened.png" alt="Logo de Python" style="border:none;background:none;box-shadow:none;margin: 0px 0px;">
+					</figure>			
+				</section>
+				<section id="python-crecimiento">
+					<h3>Crecimiento del lenguaje Python</h3>
+					<figure>
+						<img src="img/growth_major_languages.png" alt="Crecimiento del lenguaje Python" style="border:none;background:none;box-shadow:none;margin: 0px 0px;">
+						<figcaption><small>Crecimiento de los principales lenguajes de programación en los países de alto ingreso. Fuente: <a href="https://stackoverflow.blog/2017/09/06/incredible-growth-python/?_ga=2.202250515.367846061.1552160385-2089845565.1546395318">Stack Overflow.</a></small></figcaption>
+					</figure>			
+				</section>
+				<section id="python-ensenanza">
+					<h3>Python como primer lenguaje</h3>
+					<div class="row" >
+						<div class="column" style="width:60%">
+							<figure>
+								<img src="img/top-languajes-universities.png" alt="Tux" style="border:none;background:none;box-shadow:none;margin: 0px 0px;">
+								<figcaption><small>Fuente: <a href="https://cacm.acm.org/blogs/blog-cacm/176450-python-is-now-the-most-popular-introductory-teaching-language-at-top-u-s-universities/fulltext">Guo (2014)</a>.</small></figcaption>
+							</figure>
+						</div>
+						<div class="column" style="width:40%">
+							<div style="text-align:left">
+								<li>Introduce buenos "hábitos" de programación.</a>
+								<li>Los programas son fáciles de leer.</li>
+								<li>Requieren menos líneas que otros lenguajes.</li>
+							</div>	
+						</div>
+					</div>			
+				</section>
+				<section id="python-origen-01">
+					<h3>El origen de Python</h3>
+					<div class="row" >
+						<div class="column" style="width:55%">
+							<figure>
+								<img src="img/Guido-portrait-2014.jpg" alt="Guido van Rossum" style="border:none;background:none;box-shadow:none;margin: 0px 0px;">
+								<figcaption><small>Guido van Rossum</small></figcaption>
+							</figure>
+						</div>
+						<div class="column" style="width:45%">
+							<div style="text-align:left">
+								<li>Fue diseñado en 1989 por Guido van Rossum.</li>
+								<li>Inició el diseño como un "pasatiempo" para la época de navidad.</li>
+								<li>Dio a conocer la primera versión en 1991.</li>
+							</div>	
+						</div>
+					</div>			
+				</section>
+				<section id="python-origen-02">
+					<h3>El origen de Python</h3>
+					<div style="text-align:left">
+						El lenguaje se nombró Python en honor al grupo británico de comedia <a href="https://es.wikipedia.org/wiki/Monty_Python">Monty Python.</a>
+					</div>
+					<br>
+					<figure>
+						<img src="img/montypython.jpg" alt="Logo de Python" style="border:none;background:none;box-shadow:none;margin: 0px 0px;">
+						<figcaption><small>"El circo volador de Monty Python". Fuente: <a href="http://www.imdb.com/title/tt0063929/">IMDB</a>.</small></figcaption>
+					</figure>			
+				</section>
+				<section id="python-características-01">
+					<h3>Características de Python</h3>
+					<div style="text-align:left">
+						<li>Enfatiza la importancia de la "<strong>legibilidad</strong>" de los programas.</li>
+						<li>Es <a href="https://en.wikipedia.org/wiki/Interpreter_(computing)">interpretado</a>: las instrucciones se procesan una por una.</li>
+						<li>Es <a href="https://en.wikipedia.org/wiki/Cross-platform_software">multiplataforma</a>: puede ejecutarse en los sistemas operativos más populares (ej. Microsoft Windows, macOS, Linux).</li>
+					</div>
+				</section>
+				<section id="python-características-02">
+					<h3>Características de Python</h3>
+					<div style="text-align:left">
+						<li>Tiene un <a href="https://pythonconquerstheuniverse.wordpress.com/2009/10/03/static-vs-dynamic-typing-of-programming-languages/">sistema de tipos de datos dinámico</a>: las variables pueden tomar diferentes tipos de datos durante la ejecución del programa.</li>
+						<li>Cuenta con <a href="https://docs.python.org/3/c-api/memory.html">administración automática de memoria</a>: el interpretador se encarga de asignar y administrar la memoria de las variables.</li>
+						<li>Soporta varios <a href="https://en.wikipedia.org/wiki/Programming_paradigm">paradigmas de programación</a>: orientada a objetos, imperativa, funcional y procedimental.</li>
+					</div>
+				</section>
+				<section id="python-software-libre">
+					<h3>Software libre y código y abierto</h3>
+					<div style="text-align:left">
+						<li><a href="https://github.com/python/cpython">CPython</a>, la implementación de referencia del interpretador de Python es software de <a href="https://en.wikipedia.org/wiki/Open-source_model">código abierto</a>.</li>
+						<li>Su desarrollo se conducido por una comunidad enlazada a través de Internet, la cual mantiene también el <a href="https://pypi.python.org/">Python Package Index (PyPI)</a>, un repositorio público para compartir componentes de software programados con Python.</li>
+						<li>Actualmente, el PyPI contiene más de 170000 proyectos.</li>
+					</div>
+				</section>
+				<section id="python-psf">
+					<h3>Python Software Foundation</h3>
+					<div style="text-align:left">
+						<li><a href="https://www.python.org/psf/">Python Software Foundation (PSF)</a> es la organización sin fines de lucro que posee los derechos de propiedad intelectual de Python y que maneja las licencias de software libre con las que se distribuye.</li>
+						<li>Su misión es <em>"promover, proteger y avanzar el lenguaje de programación Python, así como apoyar y facilitar el crecimiento de una comunidad diversa e internacional de programadores de Python"</em>.</li>
+					</div>
+				</section>
+				<section id="python-sig">
+					<h3>Python en SIG</h3>
+					<figure>
+						<img src="img/python-gis-software.png" alt="Uso de Python en SIG" style="border:none;background:none;box-shadow:none;margin: 0px 0px;">
+						<figcaption><small>Uso de Python en SIG. Fuente: <a href="http://www.mdpi.com/2220-9964/2/1/201">Zambelli et al. (2013).</a></small></figcaption>
+					</figure>			
+				</section>
+				<section id="python-sig-ventajas">
+					<h3>Ventajas de Python para uso en SIG</h3>
+					<div style="text-align:left">
+						<li>Tiene una sintaxis sencilla y relativamente fácil de aprender por parte especialistas en SIG.</li>
+						<li>Es popular y hay muchos recursos disponibles (ej. tutoriales, libros, listas de correo, foros de discusión).</li>
+					</div>
+				</section>
+				<section id="python2-python2">
+					<h3>Python 2 vs Python 3</h3>
+					<div style="text-align:left">
+						<li>La versión 3 de Python fue liberada en 2008 y es incompatible con la versión 2.</li>
+						<li>Se recomienda migrar los programas en Python 2 a Python 3 y programar las nuevas aplicaciones en Python 3.</li>
+						<li><a href="https://www.python.org/dev/peps/pep-0373/">A partir de 2020, la versión 2 no recibirá más soporte.</a></li>
+						<li><a href="https://learntocodewith.me/programming/python/python-2-vs-python-3/#2018-differences-of-python2-vs-3">Las principales diferencias entre ambas versiones</a>, son realmente pocas.</li>
+					</div>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				history: true,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
